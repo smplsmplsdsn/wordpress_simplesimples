@@ -1,0 +1,41 @@
+$link-range-circle: 16px;
+$link-range-bar-height: 4px;
+
+@mixin input-range-circle {
+  width: $link-range-circle;
+  height: $link-range-circle;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background: $color-link;
+  border: none;  
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  
+  width: 130px;
+  height: $link-range-bar-height;
+  border-radius: math.div($link-range-bar-height, 2);
+  background: #ccc;
+  cursor: pointer;  
+  outline: 0;
+  
+  -webkit-tap-highlight-color:rgba(0,0,0,0);  // Android対応
+  
+  // マル（-webkit-）
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    @include input-range-circle;
+  }
+  
+  // マル（-moz-）
+  &::-moz-range-thumb {
+    @include input-range-circle;
+  }
+  
+  // マルをドラッグしているとき
+  &:active::-webkit-slider-thumb {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }  
+}
