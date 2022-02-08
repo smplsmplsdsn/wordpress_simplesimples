@@ -1,0 +1,144 @@
+html {
+  width: 100%;
+  height: 100%;  
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+  color: #333132;
+  line-height: 1;
+  font-size: 15px;
+  
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #fafbf5), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #fafbf5),color-stop(.75, #fafbf5), color-stop(.75, transparent),to(transparent));
+  background-size: 14px 14px;  
+}
+
+.text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+p {
+  margin: 1em 0 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.ja,
+.en {
+  background: #fff;
+}
+
+.ja,
+.ja-link {
+  font-family: 'M PLUS 1p', sans-serif;
+}
+
+h1 .en {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 40px;
+}
+
+h1 .ja {
+  font-size: 22px;
+}
+
+p .en {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 24px;
+}
+
+.bg {
+  position: fixed;
+  top: 20%;
+  right: 0;
+  display: block;
+  width: 60%;
+  height: 60%;
+  margin: 0;
+  padding: 0;
+  background: url(../images/error.jpg) right top no-repeat;
+  background-size: cover;
+  
+}
+
+a {
+  display: inline-block;
+  height: 44px;
+  line-height: 44px;
+  margin-top: 1em;
+  padding: 0 1.5em 0 1em;
+  border-radius: 50px;
+  background: #000;
+  color: #fafafa;
+  text-decoration: none;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+}
+
+
+
+@media (max-height: 800px) {
+  .bg {
+    top: 5%;
+    height: 90%;    
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    color: #fff;
+  }
+  
+  .text {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .ja,
+  .en {
+    background: none;
+  }
+  
+  .bg {
+    top: 0;
+    width: 100%;
+    height: 100%;    
+  }
+  .bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  a {
+    background: #fff;
+    color: #333132;
+  }
+}
