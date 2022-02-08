@@ -24,7 +24,19 @@ $view_type = 'moviereview';
 ?>
 <!doctype html>
 <html>
-  <?php include_once($theme_dir."/include/post/parts-head.php"); ?>
+  <head>
+    <meta charset="utf-8">
+    <title>映画レビュー登録画面</title>
+    <?php include_once($theme_dir."/include/google.php"); ?>
+    <meta name="robots" content="NONE">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="manifest" href="<?php echo ASSETS_PATH; ?>/<?php echo $head_manifest; ?>/manifest.json">
+    <link rel="shortcut icon" href="<?php echo ASSETS_PATH; ?>/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="<?php echo ASSETS_PATH; ?>/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="<?php echo ASSETS_PATH; ?>/icomoon-moviereview/style.css?t=<?php echo filemtime(ASSETS_LOOT."/icomoon-moviereview/style.css"); ?>">
+    <link rel="stylesheet" href="<?php echo ASSETS_PATH; ?>/css/moviereview.min.css?t=<?php echo filemtime(ASSETS_LOOT."/css/moviereview.min.css"); ?>">
+  </head>
   <body class="entry">
     <?php if ($post_id != ''): ?>
     <style>
