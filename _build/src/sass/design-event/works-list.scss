@@ -1,0 +1,33 @@
+.works-list {
+  
+  max-width: 400px;
+  margin: 0 0 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+  
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem 1rem;
+    
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  a {
+    display: block;
+    padding: 100% 0 0;
+    border: 1px solid #eee;
+    border-radius: 48%;
+    background-color:  #fff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    &.selected {
+      transition: transform 0.5s;
+      transform: rotateY(-360deg);      
+    }
+  }
+}

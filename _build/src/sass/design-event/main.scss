@@ -1,0 +1,9 @@
+.main {
+  height: calc(100vh - 330px);
+  min-height: 450px;
+  padding: env(safe-area-inset-top) 0 5rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+  background: url(../images/event/otonanoaoharuten/bg.png) center center repeat;
+  background-size: 400px 400px;
+}

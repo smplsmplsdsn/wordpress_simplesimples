@@ -1,0 +1,27 @@
+.footer {
+  padding: 2rem 1rem calc(env(safe-area-inset-bottom) + 1rem);
+  background: #fafafa;
+  text-align: center;
+  
+  &__members {
+    padding: 0 0 3rem !important;
+  }
+  
+  &__title {
+    margin: 0 0 1rem;
+    font-size: 18px;
+  }
+  
+  &__copyright {
+    display: block;
+    color: #777;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    text-align: right;
+    
+    @include mq-max($not-tablet-width) {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+.info {
+  padding: 2rem;
+  font-size: 20px;
+  
+  @include mq-max($smartphone-width) {
+    padding: 1rem 0 2rem;
+  }
+  
+  &__content {
+    order: 2;
+    line-height: 1.5;
+  }
+  
+  &__title {
+    margin-bottom: 0.5rem;
+    img {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+    }
+    @include mq-max($smartphone-width) {
+      padding: 0 2rem;
+    }
+  }
+  
+  &__subtitle {
+    max-width: 320px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 0.2rem;
+    
+    @include mq-max($not-tablet-width) {
+      margin: auto;
+    }
+
+  }
+  
+  &__date {
+    display: block;
+    font-size: 30px;
+    
+    text-decoration: line-through;
+    
+    
+    &-sub {
+      font-size: 16px;
+    }
+    
+    &-time {
+      display: block;
+      font-size: 28px;
+    }
+  }
+  
+  &__column {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    padding: 3rem 0 0;    
+  }
+  
+  &__place {
+    margin: 2rem 0 0;
+    font-size: 24px;
+    span {
+      display: block;
+      font-size: 14px;
+    }
+    a {
+      margin: 0 0 0 5px;
+      &::before {
+        content: '(';
+      }
+      &::after {
+        content: ')';
+      }
+    }
+  }
+  
+  &__map {
+    order: 1;
+    background: url(../images/event/otonanoaoharuten/map.svg?2) left top no-repeat;
+    background-size: auto 250px;
+    img {
+      width: auto;
+      height: 250px;      
+    }
+  }
+  
+  @include mq-max($not-tablet-width) {
+    text-align: center;
+    
+    &__column {
+      display: block;
+      margin: 0 auto;
+    }
+    
+    &__title img {
+      margin-right: auto;
+      margin-left: auto;
+    }
+    
+    &__map {
+      margin: 2rem auto 0;
+      background-position: top center;
+      img {
+        margin: 0 auto;
+      }
+    } 
+  }
+}
