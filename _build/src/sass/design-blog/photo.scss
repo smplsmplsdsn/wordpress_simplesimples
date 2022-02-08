@@ -1,0 +1,230 @@
+$photo-header-height: 80px;
+$photo-content-padding: 1rem;
+
+.photo {
+  background: #fff;
+  color: #333132;
+  
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $photo-header-height;
+    
+    &-title {
+      text-align: center;
+      font-family: 'Baloo Paaji 2', cursive;
+      font-size: 18px;
+      font-weight: normal;
+      letter-spacing: 0.2em;
+      
+      a {
+        color: #111;
+      }
+    }
+  }
+  
+  &__mainvisual {
+    width: 100%;
+    height: calc(100vh - #{$photo-header-height + 50px});
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  &__title {
+    margin: 0 0 1rem;
+    font-size: 30px;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    transform: scaleY(1.05);
+    line-height: 1.2;
+  }
+  
+  &__content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem $photo-content-padding 5rem;
+    box-sizing: border-box;
+    
+    h2 {
+      margin: 2rem 0;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    
+    h3 {
+      margin: 1.5rem 0;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    
+    h4 {
+      margin: 1rem 0;
+      font-size: 100%;
+      line-height: 1.8;
+    }
+    
+    p {
+      margin: 1rem 0;
+      line-height: 1.8;
+    }
+    
+    figure + figure {
+      margin: 1px 0 0;
+    }
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem 1rem;
+    margin: 0 auto;
+    padding: 0 1rem 5rem;
+    list-style: none;
+    
+    @include mq-max($smartphone-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      
+      li {
+        width: 100%;
+        min-width: 100%;
+      }
+    }
+    
+    li {
+      width: 200px;
+      min-width: 200px;
+      padding: 0 0 10px;
+    }
+    
+    a {
+      color: $color-default;
+      
+      &:hover figure {
+        transform: rotate(2deg);
+      }
+    }
+    
+    figure {
+      height: 0;
+      padding: 75% 0 0;
+      border: 5px solid #fff;
+      background-color: #eee;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transition: transform 0.5s;
+    }
+    
+    span {
+      display: block;
+      padding: 10px 0 5px;
+      font-size: 13px;
+      line-height: 1.2;
+    }
+    
+    time {
+      font-size: 11px;
+    }
+  }
+  
+  &__splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    
+    &-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      min-height: 100%;
+    }
+    
+    &-title {
+      margin: 0 0 1rem;
+      font-family: 'Baloo Paaji 2', cursive;
+      font-size: 18px;
+      letter-spacing: 0.2em;
+    }
+    
+    &-loading-bar {
+      width: 100px;
+      height: 2px;
+      border: 1px solid #333;
+      border-radius: 50px;
+    }
+    
+    &-bar {
+      display: block;
+      width: 0;
+      height: 100%;
+      background: #333;
+      border-radius: 50px;
+      transition: width 0.5s;
+    }
+  }
+  
+  &__slideshow {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background: #000;
+    
+    .slideshow__frame {
+      width: 100%;
+      height: 100vh;
+    }
+    .slideshow__unit {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  
+  img {
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+  }
+  
+  // YouTube
+  iframe[src^="https://www.youtube.com"] {
+    
+    @include mq-max(560px) {
+      width: calc(100% + $photo-content-padding*2);
+      min-width: calc(100% + $photo-content-padding*2);
+      height: math.div(math.div(315, 560)*1000vw, 10);
+      margin-left: $photo-content-padding*(-1);
+      margin-right: 0;
+    }
+  }
+  
+}
+
+html.fix .photo__slideshow {
+  visibility: visible;
+}

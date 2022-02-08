@@ -1,0 +1,185 @@
+$lyric-max-width: 800px;
+.lyric {
+  background: #222;
+  color: #ccc;
+  
+  &__cover {
+    width: 100%;
+    height: auto;
+  }
+  
+  &__main {
+    padding: 5rem 1rem 1rem;
+    background: #000;
+    color: #eee;
+    text-align: center;
+    font-size: 15px;
+    line-height: 2;
+    
+    @include mq-max($smartphone-width) {
+      padding: 2rem 0.5rem 1rem;
+    }
+  }
+  
+  &__title {
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+  }
+  
+  &__performance,
+  &__author,
+  &__date {
+    color: #eee;
+    font-size: 11px;
+  }
+  
+  &__content {
+    padding: 1rem 0 0;
+    
+    p:not(:first-child) {
+      padding: 2rem 0 0;
+    }
+  }
+  
+  &__nav {
+    max-width: $lyric-max-width;
+    margin: 0 auto;
+    padding: 1rem;
+    
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+      gap: 1rem 1rem;
+      
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      line-height: 1.2;
+      
+      strong {
+        display: block;
+        width: 100%;
+        font-weight: normal;
+      }
+
+      span {
+        font-size: 11px;
+        color: #ccc;
+      }
+    }
+    
+    li {
+      border-radius: 8px;
+      background: #333132;
+    }
+    
+    a {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      min-height: 80px;
+      padding: 1rem;      
+      box-sizing: border-box;
+      color: #fff;
+      text-align: left;
+      opacity: 1;
+      transition: 0.35s;
+      
+      &.hover {
+        opacity: 0.5;
+      }
+      
+      strong,
+      span {
+        display: block;
+      }
+    } 
+  }
+  
+  &__credit {
+    max-width: $lyric-max-width;
+    margin: 0 auto;
+    padding: 2rem 0 5rem;
+    border-top: 1px solid #474546;
+    @include mq-max(#{$lyric-max-width + 40px}) {
+      padding: 2rem 1rem 5rem;
+    }
+    
+    &-outline {
+      padding: 1rem 0 2rem;
+      line-height: 1.8;
+    }
+    
+    &-title {
+      color: #fff;
+      font-weight: normal;
+    }
+    
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem 1rem;      
+    }
+    
+    &-name {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      color:  #fff;
+      font-weight: normal;
+    }
+    
+    &-term {
+      margin: 10px 0;
+      span {
+        margin: 0 2px 0 0;
+        font-size: 12px;
+      }
+    }
+
+    &-fig {
+      display: block;
+      width: 80px;
+      min-width: 80px;
+      height: 80px;
+      border-radius: 48%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      &--daysweet {
+        background-image: url(../images/blog/lyric-daysweet.jpg);
+      }
+      &--allinthemind {
+        background-image: url(../images/blog/lyric-allinthemind.jpg);
+      }
+      &--plum {
+        background-image: url(../images/blog/lyric-plum.jpg);
+      }
+      &--pastelsbadges {
+        background-image: url(../images/blog/lyric-pastelsbadges.jpg);
+      }
+      &--bremen {
+        background-image: url(../images/blog/lyric-bremen.jpg);
+      }
+    }
+    
+    &-member {
+      font-size: 13px;
+      th {
+        padding: 5px 5px 5px 0;
+        font-weight: normal;
+        text-align: right;
+        vertical-align: top;
+        white-space: nowrap;
+      }
+      td {
+        padding: 5px 0;
+      }
+    }
+  }
+  
+}
