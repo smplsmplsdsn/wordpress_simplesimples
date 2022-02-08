@@ -1,0 +1,22 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 5px;
+  padding: 5px;
+  overflow: hidden;
+  
+  &--less {
+    grid-template-columns: repeat(auto-fit, 220px);
+  }
+  
+  @include mq-max($not-tablet-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  &--temp {
+    padding: 0;
+    .unit {
+      display: none;
+    }
+  }
+}

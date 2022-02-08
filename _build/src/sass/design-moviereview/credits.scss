@@ -1,0 +1,16 @@
+.credits {
+  @include footer-section;
+  
+  font-size: 12px;
+  
+  dt {
+    margin: 0 0 10px;
+  }
+  
+  
+  &__tmdb {
+    width: auto;
+    height: 10px;
+  }
+  
+}

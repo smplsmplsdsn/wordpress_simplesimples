@@ -1,0 +1,43 @@
+.footer {
+  padding: 1.5rem 1rem 0;
+  box-sizing: border-box;
+  border-top: 1px solid #999;  
+  background: #424445;
+  
+  &::after {
+    content: '';
+    display: block;
+    height: 56vh;
+    max-height: 800px;
+    margin: 1rem -1rem 0;
+    background: url(../ogp-moviereview.jpg) center center no-repeat;
+    background-size: cover;
+  }
+  
+  &__grid {
+    padding: 0 0 1rem;
+    @include mq-min($not-tablet-width) {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      column-gap: 1rem;      
+    }
+  }
+  
+  &__title {
+    font-family: 'my-oswald', 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    color: #eee;
+  }
+  
+  &__copyright {
+    padding: 1rem 0 0;
+    line-height: 1.5;
+    font-size: 11px;
+    
+    small {
+      margin: 0 5px 0 0;
+      white-space: nowrap;
+    }
+  }
+}

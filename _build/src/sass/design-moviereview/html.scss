@@ -1,0 +1,44 @@
+html {
+  &.searching,
+  &.detailing {
+    height: 100%;
+    
+    body {
+      height: 100%;
+      overflow: hidden;
+    }
+    
+    .cover {
+      top: 0;
+      transition: 0.3s top;
+    }
+    
+  }
+  
+  &.detailing {
+    .detail,
+    .detail__close {
+      top: 0;
+      transition: 0.3s 0.3s top;
+    }    
+  }
+  
+  &.searching {
+    .search,
+    .search__close {
+      top: 0;
+      transition: 0.3s 0.3s top;
+    }    
+  }
+  
+  .cover {
+    transition: 0.3s 0.3s top;
+  }
+  
+  .search,
+  .search__close,
+  .detail,
+  .detail__close {
+    transition: 0.3s top;
+  }
+}

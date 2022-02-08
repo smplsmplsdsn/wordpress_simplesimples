@@ -1,0 +1,38 @@
+.sns {
+  display: flex;
+  column-gap: 10px;
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+  
+  li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: $border-radius;
+    font-size: 12px;    
+
+    @include mq-max($tablet-width) {
+      width: 44px;
+      height: 44px;
+      font-size: 14px;
+    }
+    
+    span[class^="icon-"] {
+      transition: transform 0.5s;
+    }
+    
+    &:hover span[class^="icon-"],
+    &.hover span[class^="icon-"] {
+      transform: rotateY(-360deg);
+    }
+  }
+}

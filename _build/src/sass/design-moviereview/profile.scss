@@ -1,0 +1,47 @@
+.profile {
+  @include footer-section;
+  
+  &__flex {
+    display: flex;
+    gap: 1rem;
+    @include mq-max($smartphone-width) {
+      display: block;
+      overflow: hidden;
+    }
+  }
+  
+  &__text {
+  }
+  
+  &__figure {
+    width: 120px;
+    min-width: 120px;
+    height: 180px;
+    background: #666 url(../images/profile.jpg) center center no-repeat;
+    background-size: cover;
+    @include mq-max($smartphone-width) {
+      float: left;
+      margin: 0 1rem 1rem 0;
+    }
+  }
+  
+  &__intro {
+    > *:not(:first-child) {
+      margin: 1rem 0 0;
+    }
+  }
+  
+  &__sns {
+    margin: 0 0 6px;
+  }
+  
+  &__name {
+    font-family: 'my-oswald', 'Roboto Condensed', sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+  }
+  
+  &__intro {
+    font-feature-settings: 'palt';
+  }
+}

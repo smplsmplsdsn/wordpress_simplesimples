@@ -1,0 +1,22 @@
+.pager {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: $pager-height;
+  padding: 1rem 0;
+  font-family: 'my-oswald', 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+  
+  &__status {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 0 10px;
+  }
+}

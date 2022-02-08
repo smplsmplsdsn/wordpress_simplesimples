@@ -1,0 +1,217 @@
+// NOTICE html.scss でアニメーションの設定
+
+$form-bg: #fbfaf5;
+
+@mixin search-btn {
+  border: 1px solid #aaa;  
+  background: #fff;
+  color: #aaa;
+  letter-spacing: 0;
+  
+  &.on {
+    border: 1px solid #121212;
+    color: #121212;
+    background: #fbc600;
+  }
+}
+
+.search {
+  @include view;
+
+  background: rgba(0, 0, 0, 0.5);
+  
+  &__content {
+    display: grid;
+    min-height: 100%;
+    
+    grid-template-columns: 1fr 400px;
+    
+    @include mq-max(400px) {      
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &__space {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    @include mq-max(400px) {      
+      display: none;
+    }
+  }
+  
+  &__main {
+    min-height: 100%;
+    background: $form-bg;
+  }
+  
+  &__form {
+    padding: 1rem;
+    &:last-child {
+      padding-bottom: 150px;
+    }
+  }
+  
+  &__separate {
+    margin: 0 0 1rem;
+  }
+  
+  input[name='query'] {
+    height: 44px;
+  }
+  
+  &__title {
+    position: relative;
+    text-align: center;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+      display: block;
+      width: calc(100% - 2rem);
+      height: 2px;
+      margin: -1px 1rem 0;
+      background: $color-default-o;
+    }
+    
+    &-inner {
+      position: relative;
+      z-index: 2;
+      padding: 0 5px;
+      background: $form-bg;
+    }
+  }
+    
+  &__star {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
+
+    gap: 0 2px;
+    
+    text-align: center;
+    
+    &-unit {
+      display: block;
+      padding: 5px 0;
+      border-radius: 2px;
+      @include search-btn;
+    }
+    
+    &-star,
+    &-num{
+      display: block;
+    }
+  }
+  
+  &__genre {
+    display: flex;
+    flex-wrap: wrap;
+    &-link {
+      display: block;
+      margin: 0 5px 5px 0;
+      padding: 5px 10px;
+      border-radius: 50px;
+      @include search-btn;
+    }
+  }
+  
+  &__runtime,
+  &__release,
+  &__country {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  
+  &__runtime {
+    &-box {
+      max-width: 60px;
+      text-align: right;
+    }
+  }
+  
+  &__action {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    letter-spacing: -1px;
+    
+    &--freeword {
+      
+      .search__action-submit {
+        margin: 0 0 0 auto;
+      }
+    }
+    
+    &--condition {
+      border-top: 1px dotted $color-default-o;
+    }
+    
+    &-clear,
+    &-submit {
+      display: block;
+      padding: 0.5rem 0 0;
+      
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 44px;        
+      }
+    }
+    
+    &-clear {
+      position: absolute;
+      top: 0;
+      left: 0;
+      
+      a {
+        border: 1px solid transparent;
+        color: $color-default-o;                
+      }
+    }
+    
+    &-submit {
+      margin: 0 auto;
+      a {
+        padding: 0 1rem;
+        border-radius: 40px;
+        border: 1px solid #000;
+        color: #000;
+        background: #fff;
+        letter-spacing: 0;
+      }
+    }
+
+    
+  }
+  
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    a {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 5px;
+      color: #000;
+      white-space: nowrap;
+      letter-spacing: -1px;
+    }
+  }
+  
+  &__alert {
+    padding: 10px 0 0;
+    color: #D21417;
+    font-style: italic;
+    line-height: 1.5;
+  }
+}

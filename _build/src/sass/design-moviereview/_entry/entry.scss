@@ -1,0 +1,70 @@
+.js-entry-edit-view {
+  display: none;
+}
+
+.entry {
+  background: #D5DDEE;
+  color: #333;
+  line-height: 1.5;
+    
+  &__inner {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  &__section {
+    margin: 2rem 0 0;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+  }
+  
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    padding: 1rem 0;
+  }
+  
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border: 1px solid #000;
+    border-radius: 50px;
+    background-color: #FFEB1A;
+    color: #000;
+  }
+  
+  &__error {
+    display: none;
+    color: #C10003;
+    font-style: italic;
+  }
+  
+  &__section {
+    table {
+      width: 100%;
+    }
+    th {
+      padding: 5px 5px 5px 0;
+    }
+    td {
+      padding: 5px 0 5px 5px;
+    }
+  }
+  
+  &__flex {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    
+    span,
+    label {
+      white-space: nowrap;
+    }
+  }
+  
+}

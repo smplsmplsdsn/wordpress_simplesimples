@@ -1,0 +1,14 @@
+.condition {
+  display: none;
+  margin: 0 5px 5px;
+  padding: 1rem;
+  background: #424445;
+  color: #eee;
+  line-height: 1.3;
+  letter-spacing: 0;
+  
+  &__count {
+    padding: 0 0 0 5px;
+    white-space: nowrap;
+  }
+}
