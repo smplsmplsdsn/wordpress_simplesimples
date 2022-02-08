@@ -141,7 +141,13 @@ const gulpTask = (filename) => {
 }
 
 gulpTask('simplesimples');
+gulpTask('post');
+gulpTask('moviereview');
+gulpTask('blog');
+gulpTask('event');
+gulpTask('sony');
+gulpTask('mulelesworld');
 
 // default
-gulp.task('default', gulp.series(gulp.parallel('watch')));
+gulp.task('default', gulp.series(gulp.parallel('watch', 'watch-post', 'watch-moviereview', 'watch-blog', 'watch-event', 'watch-sony', 'watch-mulelesworld')));
 
