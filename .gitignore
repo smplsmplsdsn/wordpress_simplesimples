@@ -1,0 +1,46 @@
+.DS_Store
+
+# 【重要】設定情報を含むファイルのため対象外にする
+include/google.php
+include/api/_config.php
+include/api/twitter-auto.php
+
+# 自動生成するファイルのため対象外にする
+_build/dist/
+assets/css/*.min.css
+assets/js/*.min.js
+
+# プレーン
+_build/src/js/last-*
+_build/src/js/individual-*
+_build/src/js/individual -*
+
+_build/src/sass/var-*
+_build/src/sass/design-*
+_build/src/sass/design -*
+
+assets/css/error.css
+
+assets/fonts/*
+assets/highlight/*
+assets/icomoon*
+assets/images/*
+assets/manifest-*
+assets/ogp-*
+assets/thumbnail/*
+!assets/thumbnail/_noimage*
+
+include/*
+
+functions/functions-manual.php
+functions/original/*
+
+# 本件と関係のないファイル群
+_build/src/bk_js/*
+_build/src/bk_sass/*
+functions/admin_copy/*
+functions/original_copy/*
+functions/smpls.php
+functions/tabinoto.php
+include_smplsmpls/*
+
