@@ -1,0 +1,19 @@
+.form {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  
+  display: flex;
+  justify-content: center;
+  gap: 1rem 1rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+  border-top: 1px solid #fff;
+  background: #fbfaf5;
+  
+  label {
+    display: flex;
+    align-items: center;
+  }
+}
