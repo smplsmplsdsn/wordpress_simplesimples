@@ -1,0 +1,73 @@
+.tabbar2 {
+  
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  
+  width: 100%;
+    
+  padding: 20px 0 env(safe-area-inset-bottom);
+  background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1) 20px);
+  
+  &__inner {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
+  
+  &__control {
+    display: flex;
+    align-items: center;
+    
+    height: 44px;
+    border-radius: 100px;
+    border: 1px solid #eee;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    margin: 0 0.5rem;
+    overflow: hidden;
+  }
+}
+
+.tabbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  padding: 0 0 env(safe-area-inset-bottom);
+  
+  &__inner {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  &__link {
+    position: relative;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 48%;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
+    @include mq-max($tablet-width) {
+      bottom: 20px;
+      right: -5px;
+    }
+  }
+}

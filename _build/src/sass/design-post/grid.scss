@@ -1,0 +1,23 @@
+.manylists .grid--list {
+  @include mq-min($max-width) {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));    
+  }
+}
+
+.grid {
+  display: grid;
+  
+  &--list {
+    gap: 2rem 1rem;
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr;    
+            
+    @include mq-max($tablet-width) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    @include mq-max($smartphone-width) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

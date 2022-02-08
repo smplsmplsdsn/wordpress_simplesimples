@@ -1,0 +1,17 @@
+.js-wrapper-inner {
+  opacity: 0;
+}
+
+.wrapper {
+  
+  &__inner {
+    width: $max-width;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 0 2rem;
+    
+    &--list.manylists {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.form-range {  
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
+  &__post {
+    padding:1rem 0;
+    @include mq-max($max-width) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.businessquotes {
+  &__text {
+    &::before {
+      content: "「";
+    }
+    &::after {
+      content: "」";
+    }
+  }
+  &__name,
+  &__business {
+    font-style: italic;
+  }
+  &__business {
+    &::before {
+      content: "(";
+    }
+    &::after {
+      content: ")";
+    }    
+  }
+}

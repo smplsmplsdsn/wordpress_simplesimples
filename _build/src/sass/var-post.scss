@@ -1,0 +1,37 @@
+@use "sass:list";
+@use "sass:math";
+
+// base/reset.scss
+$max-width-form: 400px;
+$border-color-form: #ccc;
+$border-radius-form: 4px;
+
+// base/common.scss
+$color-default: #333132;
+$color-default-o: #fff;
+$color-link: #ea352d;
+
+// setting/mixin_set-property.scss
+$breakpoint-default: 400px;
+
+// SNS color
+$twitter: #1DA1F2;
+$facebook: #3B5998;
+$youtube: #ff0000;
+$instagram: mix($facebook, $youtube);
+$instagram: linear-gradient(to bottom right, #5300c1, #c40094, #e80029);
+$line: #00b900;
+$github: #25292D;
+
+
+/* individual setting */
+$max-width: 1000px;
+
+$not-tablet-width: 760px;
+$tablet-width: 800px;
+$smartphone-width: 420px;
+
+$content-padding: 1.5rem;
+$content-padding-top: 2rem;
+
+$border-radius: 4px;

@@ -1,0 +1,98 @@
+.directory {
+  display: flex;
+  flex-wrap: wrap;
+  
+  width: 100%;
+  margin: 0;
+  padding: 1rem 0 0;
+  list-style: none;
+  line-height: 2.2;
+  
+  &__label {
+    color: #1d1d1d !important;
+    letter-spacing: 0;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  > li:first-child {
+    width: 68%;
+    
+    @include mq-max(880px) {
+      width: 100%;
+    }
+    
+    > ul {
+      display: flex;
+      flex-wrap: wrap;
+
+      width: 100%;
+      margin: 0 0 2rem;
+      
+      @include mq-max($smartphone-width) {
+        margin: 0;
+      }
+    }
+    
+    @include mq-max(800px) {
+      li {
+        width: 33.3%;
+        margin: 0 0 2rem;
+      }
+      li li {
+        width: auto;
+        margin: 0;
+      }
+    }
+    
+    @include mq-max($smartphone-width) {
+      li {
+        width: 50%;
+        margin: 0 0 2rem;
+      }
+      li li {
+        width: auto;
+        margin: 0;
+      }
+    }
+    
+    li {
+      width: 20%;
+      li {
+        width: 100%;
+      }
+    }
+  }
+  
+  > li:not(:first-child) {
+    width: 16%;
+    margin: 0 0 2rem;
+    
+    @include mq-max(880px) {
+      width: 20%;
+    }
+
+    @include mq-max(800px) {
+      width: 33.3%;
+    }
+    
+    @include mq-max($smartphone-width) {
+      width: 50%;
+    }
+  }
+  
+  
+  a {
+    margin: 0 2rem 0 0;
+    cursor: default;
+  }
+  
+  a[href^="http"]:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

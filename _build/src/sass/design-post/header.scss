@@ -1,0 +1,12 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  padding: 0 $content-padding;
+  box-sizing: border-box;
+  
+  background: linear-gradient(rgba(255,255,255,1) 70%, rgba(255,255,255,0));  
+  
+}

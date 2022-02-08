@@ -1,0 +1,42 @@
+.prevnext {
+  position: fixed;
+  top: 50px;
+  top: calc(env(safe-area-inset-top) + 50px);
+  left: 100%;
+  z-index: 9;
+  width: 100%;
+  transition: left 0.3s;
+  
+  &__none {
+    display: none;
+  }
+  
+  &.show {
+    left: 0;
+  }
+  
+  &__inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    gap: 0.5rem;
+    
+    
+    @include mq-max(700px) {
+      flex-direction: column-reverse;
+    }
+
+    padding: 0.5rem;
+    box-sizing: border-box;
+    background: #292c34;
+    font-size: 12px;
+
+    border-bottom-left-radius: $border-radius;
+    border-top-left-radius: $border-radius;
+  }  
+}

@@ -1,0 +1,24 @@
+.header + .search {
+  padding: 1rem;
+}
+
+.search {
+  padding: 2rem 1rem;
+  border-radius: $border-radius;
+  background: #fbfaf5;
+  
+  &:last-child {
+    margin: 2rem 0 0;
+  }
+
+  &__form {
+    margin: 0 auto;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type="text"] {
+    height: 40px !important;
+  }
+
+}
