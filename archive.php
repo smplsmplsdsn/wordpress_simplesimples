@@ -26,7 +26,7 @@ switch (true) {
 
   case is_post_type_archive('moviereview'):
     $head_manifest = 'manifest-moviereview';
-    include_once($theme_dir."/include/post/moviereview.php");
+    include_once($theme_dir."/include/moviereview/moviereview.php");
     break;
 
   case is_post_type_archive('essay'):
@@ -34,11 +34,11 @@ switch (true) {
   case is_post_type_archive('photo'):
     $head_manifest = 'manifest-blog';
     $view_type = 'blog';
-    include_once($theme_dir."/include/post/archive-".get_post_type_object(get_post_type()) -> name.".php");    
+    include_once($theme_dir."/include/blog/archive-".get_post_type_object(get_post_type()) -> name.".php");    
     break;
 
   case is_post_type_archive('lyric'):
-    include_once($theme_dir."/include/post/lyric.php");    
+    include_once($theme_dir."/include/blog/lyric.php");    
     break;
     
   default:

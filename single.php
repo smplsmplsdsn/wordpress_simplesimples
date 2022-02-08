@@ -29,11 +29,11 @@ switch (true) {
   case is_singular('photo'):
     $head_manifest = 'manifest-blog';
     $view_type = 'blog';
-    include_once($theme_dir."/include/post/single-".get_post_type_object(get_post_type()) -> name.".php");    
+    include_once($theme_dir."/include/blog/single-".get_post_type_object(get_post_type()) -> name.".php");    
     break;    
     
   case is_singular('lyric'):
-    include_once($theme_dir."/include/post/lyric.php");    
+    include_once($theme_dir."/include/blog/lyric.php");    
     break;    
     
   default:

@@ -14,7 +14,7 @@ if (!isset($head_manifest)) {
 <head>
   <meta charset="utf-8">
   <title><?php echo $head_title; ?></title>
-  <?php include_once("google.php"); ?>
+  <?php include_once($theme_dir."/include/google.php"); ?>
   <meta name="robots" content="ALL">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="format-detection" content="telephone=no">
