@@ -1,0 +1,22 @@
+.home-header {
+  padding-top: env(safe-area-inset-top);
+  &__inner {
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+  &__title {
+    padding: 2rem;
+    img {
+      width: auto;
+      height: 90px;
+      margin: auto;      
+    }
+    
+    @include mq-max($smartphone-width) {
+      padding: 1rem;
+      img {
+        height: 70px;        
+      }
+    }
+  }
+}

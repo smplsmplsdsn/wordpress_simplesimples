@@ -1,0 +1,41 @@
+.header-01 {
+  position: sticky;
+  top: 0;
+  
+  padding-top: env(safe-area-inset-top);
+  border-bottom: 1px solid #eee;
+  
+  &__inner {
+    padding: 100px 0;
+    background: #fff;
+
+    transition: padding 0.3s;
+
+    &.no-top {
+      padding: 0;
+    }    
+  }
+  
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: $max-width;
+    margin: auto;
+    padding: 1rem 1.5rem;
+    box-sizing: border-box;
+  }
+  
+  &__nav {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+    li {
+      margin: 0;
+      padding: 0 0 0 1rem;
+    }
+  }
+}

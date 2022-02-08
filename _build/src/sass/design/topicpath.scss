@@ -1,0 +1,26 @@
+.topicpath {
+	padding: 1rem;
+  font-size: 12px;
+	
+	&__inner {		
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+  
+  &__current {
+    font-weight: normal;
+  }
+	
+	a {
+		display: inline-block;
+		&::after {
+			content: "/";
+			margin: 0;
+			padding: 0 5px;
+			font-size: 10px;
+			color: #d2d2d7;
+		}
+    
+	}
+}

@@ -1,0 +1,6 @@
+.text-link {
+  &::before {
+    content: '»';
+    padding: 0 2px 0 0;
+  }
+}

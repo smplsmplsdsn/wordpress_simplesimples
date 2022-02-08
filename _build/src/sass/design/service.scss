@@ -1,0 +1,91 @@
+.service {
+  line-height: 1.8;
+  
+  &__grid {
+    display: grid;
+    gap: 5rem 2rem;
+    padding: 0 0 5rem;
+    
+    &--2 {
+      grid-template-columns: 1fr 1fr;
+    }
+    &--3 {
+      grid-template-columns: 1fr 1fr 1fr;      
+    }
+    
+    
+    @include mq-max($not-tablet-width) {
+      grid-template-columns: 1fr;
+      gap: 3rem 2rem;
+      padding: 0 0 3rem;
+    }    
+  }
+  
+  &__service {
+    h1 {
+      font-size: 20px;
+      @include mq-max($not-tablet-width) {
+        font-size: 18px;
+      }
+    }
+  }
+  
+  &__target {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 5px;
+    padding: 0.5rem 0;
+    font-size: 12px;
+  }
+  
+  &__label {
+    display: block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    background: #333132;
+    color: #fff;
+  }
+  
+  &__price {
+    line-height: 1.1;
+    &--text {
+      padding: 8px 0;
+    }
+  }
+
+  &__num {
+    margin: 0 2px 0 0;
+    font-weight: normal;
+    font-family: "BebasNeue";
+    font-size: 44px;
+    &--s {
+      font-size: 1.5em;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  &__subtext {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  &__contact {
+    padding: 2rem;
+    border: 1px solid #000;
+    // background: #edc600;
+    
+    @include mq-max($not-tablet-width) {
+      padding: 1rem;
+    }    
+
+    a {
+      color: #000;
+      margin: 0 1rem 0 0;
+    }
+  }
+}

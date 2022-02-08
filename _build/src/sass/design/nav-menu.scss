@@ -1,0 +1,35 @@
+.nav-menu {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  
+  &__inner {
+    max-width: $max-width;
+    margin: auto;
+  }
+  
+  &__content {
+    width: 160px;
+    margin: 0 0 env(safe-area-inset-bottom);
+    padding: 2rem 0;
+    @include mq-max($not-tablet-width) {
+      width: 80px;
+    }
+    
+  }
+  
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    margin: auto;
+    border-radius: 48%;
+    background: #333132;
+    color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    @include rotate;
+  }
+}

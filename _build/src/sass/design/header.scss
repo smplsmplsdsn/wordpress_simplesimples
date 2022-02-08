@@ -1,0 +1,30 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $header_size;
+  height: $header_size;
+  padding-top: env(safe-area-inset-top);
+  
+  @include mq-max($not-tablet-width) {
+    position: relative;
+  }
+  
+  @include mq-max($smartphone-width) {
+    width: $header_size_smartphone;
+    height: $header_size_smartphone;
+    
+    &__logo-image {
+      width: 60px;
+    }
+  }
+  
+  &__logo-image {
+    width: 80px;
+    height: auto;
+  }
+}

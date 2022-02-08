@@ -1,0 +1,144 @@
+/*
+ * 固定ページ専用
+ * simplesimples.com/voiceentry/
+ */
+$voiceentry-tabbar-height: 60px;
+$voiceentry-add-harfsize: 36px;
+
+.js-ve-preview,
+.js-ve-tabbar-preview {
+  display: none;
+}
+
+.voiceentry {
+  padding-bottom: env(safe-area-inset-bottom);
+  
+  a {
+    color: $color-default;
+  }
+  
+  &__preview {
+    &-inner {
+      max-width: 800px;
+      margin: auto;
+      padding: 1rem 1rem 0;
+      box-sizing: border-box;
+    }
+  }
+  
+  &__tabbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+    width: 100%;    
+    height: $voiceentry-tabbar-height;
+    padding-top: env(safe-area-inset-bottom);
+    border-top: 1px solid #eee;
+    background: #fbfaf5;
+    
+    
+    &--preview {
+      .voiceentry__tabbar-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    &-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      
+      width: 100%;
+      height: 100%;
+      max-width: 800px;
+      margin: auto;
+      box-sizing: border-box;
+    }
+            
+    span:last-child {
+      text-align: right;
+    }
+    
+    a {
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+    
+    &-add {
+      position: absolute;
+      top: math.div($voiceentry-add-harfsize*2 - $voiceentry-tabbar-height, 2)*(-1);
+      left: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      width: $voiceentry-add-harfsize*2;
+      height: $voiceentry-add-harfsize*2;
+      margin: 0 0 0 $voiceentry-add-harfsize*(-1);
+      border: 2px solid #fff;
+      border-radius: 48%;
+      background: #48AB4C;
+      color: #fff !important;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      font-size: 24px;
+      text-align: center;
+    }
+    
+    &-preview,
+    &-selected {
+      text-align: right;
+    }
+  }
+  
+  &__clone {
+    display: none;
+  }
+  
+  &__form {
+    max-width: 800px;
+    margin: auto;
+    
+    section {
+      display: flex;
+      align-items: flex-end;
+      
+      padding: 1rem 10px;
+      
+      > div {
+        width: 100%;
+        padding: 0 10px
+      }
+      
+      > nav,
+      > p {
+        display: flex;
+        column-gap: 5px;
+        white-space: nowrap;
+        
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 30px;
+          height: 30px;
+          border-radius: 48%;
+          background: #eee;
+          overflow: hidden;
+        }
+      }
+      
+      &:first-child nav a:first-child,
+      &:last-child nav a:last-child {
+        visibility: hidden;
+      }
+    }
+  }
+  
+  textarea {
+    border: none;
+    background: #fff;
+    font-size: 16px;
+    line-height: 25px;
+  }
+}

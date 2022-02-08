@@ -1,0 +1,59 @@
+.law {
+  line-height: 1.8;
+  font-size: 14px;
+  
+  &__excerpt {
+    margin: 0 0 2rem;
+  }
+  
+  section {
+    padding: 0 0 2rem;
+    h1 {
+      font-size: 18px;
+    }
+    h2 {
+      margin: 1rem 0 0;
+      font-size: 100%;
+    }
+    ul {
+      margin: 1rem 0 0;
+    }
+    ul + * {
+      margint-top: 1rem;
+    }
+  }
+  
+  &__contact {
+    margin: 0 0 2rem;
+    padding: 1.5rem;
+    border: 1px solid $color-default;
+    
+    h1 {
+      font-size: 100%;
+    }
+    
+    th {
+      padding: 0 1rem 0 0;
+      text-align: left;
+    }
+    
+    @include mq-max($smartphone-width) {
+      padding: 1rem;
+      h1 {
+        margin: 0 0 0.5rem;
+      }
+      table,
+      tr,
+      th,
+      td {
+        display: block;
+      }
+    }
+  }
+  
+  
+  p,
+  li {
+    font-feature-settings: 'palt';
+  }
+}

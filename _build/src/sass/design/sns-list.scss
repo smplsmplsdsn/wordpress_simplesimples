@@ -1,0 +1,31 @@
+.sns-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  column-gap: 10px;
+  list-style: none;
+  
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 48%;
+    
+    span[class^="icon-"] {
+      transition: transform 0.5s;
+    }
+
+    &:hover,
+    &.hover {
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    &:hover span[class^="icon-"],
+    &.hover span[class^="icon-"] {
+        transform: rotateY(-360deg);
+    }
+  }
+}

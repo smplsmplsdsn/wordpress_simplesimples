@@ -1,0 +1,45 @@
+.sns {
+  &__description {
+    line-height: 2;
+  }
+  
+  section {
+    padding: 2rem 0 1rem;
+    
+    h1 {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      height: 40px;
+      margin: 0 0 0 5px;
+      font-size: 16px;
+    }
+  }
+  
+  &__table-wrapper {
+    padding: 0 0 1rem;
+    overflow-x: auto;
+    
+    
+    table {
+      width: 100%;
+      font-size: 14px;
+      line-height: 1.5;
+    }    
+    
+    th,
+    td {
+      padding: 1rem;
+      border: 1px solid #ccc;
+      white-space: nowrap;
+      text-align: left;
+    }
+    
+    thead {
+      th {
+        background: #fafafa;
+      }
+    }
+  }
+}

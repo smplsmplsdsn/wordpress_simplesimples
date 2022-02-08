@@ -1,0 +1,12 @@
+.home-grid {
+  display: grid;
+  gap: 2rem;
+  
+  &--3 {
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    @include mq-max($not-tablet-width) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
