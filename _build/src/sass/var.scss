@@ -25,22 +25,3 @@ $github: #25292D;
 
 
 /* individual setting */
-@font-face {
-  font-family: "BebasNeue";
-  src: url(../font/BebasNeue-Regular.woff2),
-    url(../font/BebasNeue-Regular.woff);
-}
-
-$max-width: 1000px;
-
-$not-tablet-width: 760px;
-$tablet-width: 800px;
-$smartphone-width: 420px;
-
-$content-padding: 1.5rem;
-$content-padding-top: 2rem;
-
-$border-radius: 4px;
-
-$header_size: 160px;
-$header_size_smartphone: 100px;
