@@ -89,7 +89,15 @@ $is_honban で本番のみに表示するようif文を追加する
 ## 10. JSのファイル読み込み時の処理確認
 
 - _build/src/js/last.js
+or
+- _build/src/js/last-{タイプ名}.js
 
-## 11. fontがある場合の処理
+## 11. CSSのファイル読み込み時の処理確認
+
+- _build/src/sass/var.scss
+or
+- _build/src/sass/var-{タイプ名}.scss
+
+## 12. fontがある場合の処理
 
 - _build/src/sass/setting/font.scss
