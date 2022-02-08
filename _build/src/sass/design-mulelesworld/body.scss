@@ -1,0 +1,8 @@
+body {
+  overflow: hidden;
+  font-size: 18px;
+  
+  &.loaded {
+    overflow: auto;
+  }
+}

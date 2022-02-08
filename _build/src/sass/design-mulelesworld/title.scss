@@ -1,0 +1,7 @@
+.title {
+  padding: 3rem 1rem;
+  @include mq-max($smartphone-width) {
+    padding: 2rem 1rem;
+  }
+
+}

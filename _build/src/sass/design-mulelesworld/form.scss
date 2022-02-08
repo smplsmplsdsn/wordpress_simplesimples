@@ -1,0 +1,62 @@
+.form {
+  padding: 0 0 2rem;
+  border-bottom: 1px dashed$color-default;
+  
+  form {
+    padding: 1rem 0;
+  }
+  
+  &__unit {
+    margin: 0 0 1rem;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background: #fbfaf5;
+  }
+  
+  &__label {
+    display: inline-block;
+    margin: 0 0 10px;
+  }
+  
+  &__accept {
+    padding: 1rem 0;
+    text-align: center;
+  }
+    
+  &__attention {
+    line-height: 1.5;
+  }
+  
+  &__message {
+    font-size: 14px;
+  }
+  
+  .screen-reader-response:first-child {
+    display: none;
+  }
+  .wpcf7-not-valid-tip {
+    display: inline-block;
+    margin: 5px 0 0;
+    color: #FF0004;
+  }
+}
+
+.wpcf7-radio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.wpcf7-list-item {
+  display: block;
+}
+
+.wpcf7-response-output {
+  color: #1EB43E;
+  line-height: 1.5;
+}
+
+form[data-status="invalid"] .wpcf7-response-output {
+  color: #FF0004;
+}

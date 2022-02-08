@@ -1,0 +1,7 @@
+.js-picture {
+  display: none;
+  
+  &[data-num="1"] {
+    display: block;
+  }
+}
