@@ -1,0 +1,22 @@
+{
+  "short_name": "MovieReview",
+  "name": "Movie Review by Taketake",
+  "start_url": "/moviereview/?utm_source=homescreen",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#fff",
+  "background_color": "#fbfaf5",
+  "icons": [{
+    "src": "/wp-content/themes/smplsmpls/assets/manifest/manifest-512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }, {
+    "src": "/wp-content/themes/smplsmpls/assets/manifest/manifest-256.png",
+    "sizes": "256x256",
+    "type": "image/png"
+  }, {
+    "src": "/wp-content/themes/smplsmpls/assets/manifest/manifest-192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }]
+}
